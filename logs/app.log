@@ -1,0 +1,27 @@
+2025-12-25 19:55:10 | INFO     | process_transaction:23 | START: Processing transaction for USER_01
+2025-12-25 19:55:10 | INFO     | process_transaction:33 | SUCCESS: USER_01 balance updated to 442
+2025-12-25 19:55:10 | INFO     | process_transaction:23 | START: Processing transaction for USER_02
+2025-12-25 19:55:10 | INFO     | process_transaction:33 | SUCCESS: USER_02 balance updated to 78
+2025-12-25 19:55:10 | INFO     | process_transaction:23 | START: Processing transaction for USER_03
+2025-12-25 19:55:10 | INFO     | process_transaction:33 | SUCCESS: USER_03 balance updated to 77
+2025-12-25 19:55:10 | INFO     | process_transaction:23 | START: Processing transaction for USER_04
+2025-12-25 19:55:10 | INFO     | process_transaction:33 | SUCCESS: USER_04 balance updated to 398
+2025-12-25 19:55:10 | INFO     | process_transaction:23 | START: Processing transaction for USER_05
+2025-12-25 19:55:10 | INFO     | process_transaction:33 | SUCCESS: USER_05 balance updated to 60
+2025-12-25 19:55:10 | INFO     | process_transaction:23 | START: Processing transaction for USER_06
+2025-12-25 19:55:10 | INFO     | process_transaction:33 | SUCCESS: USER_06 balance updated to 508
+2025-12-25 19:55:10 | INFO     | process_transaction:23 | START: Processing transaction for USER_07
+2025-12-25 19:55:10 | ERROR    | process_transaction:37 | DATA MISMATCH: Expected key 'amount' not found for USER_07. Is the target API schema changed?
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\log_upskill\main.py", line 31, in process_transaction
+    final_balance = data["amount"] + 10
+                   ~~~~^^^^^^^^^^
+KeyError: 'amount'
+2025-12-25 19:55:10 | INFO     | process_transaction:23 | START: Processing transaction for USER_08
+2025-12-25 19:55:10 | WARNING  | fetch_user_balance:10 | Latency detected for USER_08. API took 2.5s
+2025-12-25 19:55:11 | INFO     | process_transaction:33 | SUCCESS: USER_08 balance updated to 189
+2025-12-25 19:55:11 | INFO     | process_transaction:23 | START: Processing transaction for USER_09
+2025-12-25 19:55:11 | WARNING  | fetch_user_balance:10 | Latency detected for USER_09. API took 2.5s
+2025-12-25 19:55:12 | INFO     | process_transaction:33 | SUCCESS: USER_09 balance updated to 439
+2025-12-25 19:55:13 | INFO     | process_transaction:23 | START: Processing transaction for USER_10
+2025-12-25 19:55:13 | INFO     | process_transaction:33 | SUCCESS: USER_10 balance updated to 484
