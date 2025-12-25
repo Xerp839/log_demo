@@ -3,11 +3,17 @@ import json
 import os
 from datetime import datetime
 from logging.handlers import RotatingFileHandler
+import dotenv
+
+dotenv.load_dotenv()
 
 # 1. Create logs directory
 LOG_DIR = "logs"
 if not os.path.exists(LOG_DIR):
     os.makedirs(LOG_DIR)
+
+LOG_LEVEL = os.getenv("LOG_LEVEL", "DEBUG").upper()
+
 
 # 2. The JSON Formatter (For the Machines/TL)
 class ProductionJSONFormatter(logging.Formatter):
@@ -27,7 +33,7 @@ class ProductionJSONFormatter(logging.Formatter):
 
 def setup_logger():
     logger = logging.getLogger("ProductionLogger")
-    logger.setLevel(logging.DEBUG)
+    logger.setLevel(LOG_LEVEL)
 
     # --- FORMAT 1: The Human Format (Pipe Separated) ---
     human_format = logging.Formatter(
