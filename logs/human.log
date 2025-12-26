@@ -1,0 +1,62 @@
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_01
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_01', 'status': 200, 'payload': {'val': 71}}
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_01: Result=142
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_02
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_02', 'status': 200, 'payload': {'val': 72}}
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_02: Result=144
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_03
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_03', 'status': 200, 'payload': {'val': 20}}
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_03: Result=40
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_04
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_04', 'status': 200, 'payload': {'val': 11}}
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_04: Result=22
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_05
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_05', 'status': 200, 'payload': {'val': 16}}
+2025-12-26 11:10:49 | WARNING  | fetch_user_data:16 | Connection unstable for USER_05. Using cached headers.
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_05: Result=32
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_06
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_06', 'status': 200, 'payload': {'val': 32}}
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_06: Result=64
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_07
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_07', 'status': 200, 'payload': {'val': 14}}
+2025-12-26 11:10:49 | ERROR    | process_request:40 | Failed to find 'payload' in API response for USER_07
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\log_upskill\main.py", line 34, in process_request
+    result = data["payload"]["val"] * 2
+            ~~~~^^^^^^^^^^^
+KeyError: 'payload'
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_08
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_08', 'status': 200, 'payload': {'val': 39}}
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_08: Result=78
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_09
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_09', 'status': 200, 'payload': {'val': 91}}
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_09: Result=182
+2025-12-26 11:10:49 | INFO     | process_request:28 | Processing request for USER_10
+2025-12-26 11:10:49 | DEBUG    | fetch_user_data:12 | RAW API RESPONSE: {'id': 'USER_10', 'status': 200, 'payload': {'val': 36}}
+2025-12-26 11:10:49 | INFO     | process_request:36 | Calculation complete for USER_10: Result=72
+2025-12-26 11:14:41 | INFO     | process_request:28 | Processing request for USER_11
+2025-12-26 11:14:41 | INFO     | process_request:36 | Calculation complete for USER_11: Result=192
+2025-12-26 11:14:41 | INFO     | process_request:28 | Processing request for USER_12
+2025-12-26 11:14:41 | INFO     | process_request:36 | Calculation complete for USER_12: Result=118
+2025-12-26 11:14:41 | INFO     | process_request:28 | Processing request for USER_13
+2025-12-26 11:14:41 | INFO     | process_request:36 | Calculation complete for USER_13: Result=132
+2025-12-26 11:14:42 | INFO     | process_request:28 | Processing request for USER_14
+2025-12-26 11:14:42 | INFO     | process_request:36 | Calculation complete for USER_14: Result=162
+2025-12-26 11:14:42 | INFO     | process_request:28 | Processing request for USER_15
+2025-12-26 11:14:42 | WARNING  | fetch_user_data:16 | Connection unstable for USER_15. Using cached headers.
+2025-12-26 11:14:42 | INFO     | process_request:36 | Calculation complete for USER_15: Result=138
+2025-12-26 11:14:42 | INFO     | process_request:28 | Processing request for USER_16
+2025-12-26 11:14:42 | INFO     | process_request:36 | Calculation complete for USER_16: Result=188
+2025-12-26 11:14:42 | INFO     | process_request:28 | Processing request for USER_17
+2025-12-26 11:14:42 | ERROR    | process_request:40 | Failed to find 'payload' in API response for USER_17
+Traceback (most recent call last):
+  File "C:\Users\LENOVO\Desktop\log_upskill\main.py", line 34, in process_request
+    result = data["payload"]["val"] * 2
+            ~~~~^^^^^^^^^^^
+KeyError: 'payload'
+2025-12-26 11:14:42 | INFO     | process_request:28 | Processing request for USER_18
+2025-12-26 11:14:42 | INFO     | process_request:36 | Calculation complete for USER_18: Result=32
+2025-12-26 11:14:42 | INFO     | process_request:28 | Processing request for USER_19
+2025-12-26 11:14:42 | INFO     | process_request:36 | Calculation complete for USER_19: Result=188
+2025-12-26 11:14:42 | INFO     | process_request:28 | Processing request for USER_20
+2025-12-26 11:14:42 | INFO     | process_request:36 | Calculation complete for USER_20: Result=150

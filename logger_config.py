@@ -7,15 +7,9 @@ import dotenv
 
 dotenv.load_dotenv()
 
-# 1. Create logs directory
-LOG_DIR = "logs"
-if not os.path.exists(LOG_DIR):
-    os.makedirs(LOG_DIR)
+# Get level from .env
+ENV_LOG_LEVEL = os.getenv("LOG_LEVEL", "DEBUG").upper()
 
-LOG_LEVEL = os.getenv("LOG_LEVEL", "DEBUG").upper()
-
-
-# 2. The JSON Formatter (For the Machines/TL)
 class ProductionJSONFormatter(logging.Formatter):
     def format(self, record):
         log_obj = {
@@ -24,38 +18,46 @@ class ProductionJSONFormatter(logging.Formatter):
             "message": record.getMessage(),
             "module": record.module,
             "line": record.lineno,
-            # This captures the 'extra' data like Trace ID
             "trace_id": getattr(record, "trace_id", "N/A"), 
         }
         if record.exc_info:
             log_obj["exception"] = self.formatException(record.exc_info)
         return json.dumps(log_obj)
 
-def setup_logger():
-    logger = logging.getLogger("ProductionLogger")
-    logger.setLevel(LOG_LEVEL)
+# --- REUSABLE SETUP FUNCTION ---
+def setup_logger(logger_name="AppLogger", log_dir="logs"):
+    # Create the specific directory if it doesn't exist
+    if not os.path.exists(log_dir):
+        os.makedirs(log_dir)
 
-    # --- FORMAT 1: The Human Format (Pipe Separated) ---
+    logger = logging.getLogger(logger_name)
+    logger.setLevel(ENV_LOG_LEVEL)
+
+    # Avoid adding multiple handlers if the logger is already setup
+    if logger.hasHandlers():
+        logger.handlers.clear()
+
     human_format = logging.Formatter(
         "%(asctime)s | %(levelname)-8s | %(funcName)s:%(lineno)d | %(message)s",
         datefmt="%Y-%m-%d %H:%M:%S"
     )
 
-    # --- HANDLER 1: Terminal (Human) ---
+    # 1. Console
     console_handler = logging.StreamHandler()
     console_handler.setFormatter(human_format)
     logger.addHandler(console_handler)
 
-    # --- HANDLER 2: Human File (app.log) ---
-    human_file = RotatingFileHandler(f"{LOG_DIR}/app.log", maxBytes=5*1024*1024, backupCount=3)
+    # 2. Human File
+    human_file = RotatingFileHandler(f"{log_dir}/human.log", maxBytes=5*1024*1024, backupCount=3)
     human_file.setFormatter(human_format)
     logger.addHandler(human_file)
 
-    # --- HANDLER 3: Machine File (app.json) ---
-    json_file = RotatingFileHandler(f"{LOG_DIR}/app.json", maxBytes=5*1024*1024, backupCount=3)
+    # 3. JSON File
+    json_file = RotatingFileHandler(f"{log_dir}/machine.json", maxBytes=5*1024*1024, backupCount=3)
     json_file.setFormatter(ProductionJSONFormatter())
     logger.addHandler(json_file)
 
     return logger
 
-log = setup_logger()
+# Default logger for main app
+log = setup_logger("ProductionLogger", "logs")

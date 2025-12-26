@@ -1,0 +1,52 @@
+{"timestamp": "2025-12-26 11:10:49,009", "level": "INFO", "message": "Processing request for USER_01", "module": "main", "line": 28, "trace_id": "8e221a29"}
+{"timestamp": "2025-12-26 11:10:49,009", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_01', 'status': 200, 'payload': {'val': 71}}", "module": "main", "line": 12, "trace_id": "8e221a29"}
+{"timestamp": "2025-12-26 11:10:49,009", "level": "INFO", "message": "Calculation complete for USER_01: Result=142", "module": "main", "line": 36, "trace_id": "8e221a29"}
+{"timestamp": "2025-12-26 11:10:49,111", "level": "INFO", "message": "Processing request for USER_02", "module": "main", "line": 28, "trace_id": "2e5b8942"}
+{"timestamp": "2025-12-26 11:10:49,111", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_02', 'status': 200, 'payload': {'val': 72}}", "module": "main", "line": 12, "trace_id": "2e5b8942"}
+{"timestamp": "2025-12-26 11:10:49,112", "level": "INFO", "message": "Calculation complete for USER_02: Result=144", "module": "main", "line": 36, "trace_id": "2e5b8942"}
+{"timestamp": "2025-12-26 11:10:49,213", "level": "INFO", "message": "Processing request for USER_03", "module": "main", "line": 28, "trace_id": "ce6b9402"}
+{"timestamp": "2025-12-26 11:10:49,213", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_03', 'status': 200, 'payload': {'val': 20}}", "module": "main", "line": 12, "trace_id": "ce6b9402"}
+{"timestamp": "2025-12-26 11:10:49,215", "level": "INFO", "message": "Calculation complete for USER_03: Result=40", "module": "main", "line": 36, "trace_id": "ce6b9402"}
+{"timestamp": "2025-12-26 11:10:49,317", "level": "INFO", "message": "Processing request for USER_04", "module": "main", "line": 28, "trace_id": "f7d83938"}
+{"timestamp": "2025-12-26 11:10:49,317", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_04', 'status': 200, 'payload': {'val': 11}}", "module": "main", "line": 12, "trace_id": "f7d83938"}
+{"timestamp": "2025-12-26 11:10:49,317", "level": "INFO", "message": "Calculation complete for USER_04: Result=22", "module": "main", "line": 36, "trace_id": "f7d83938"}
+{"timestamp": "2025-12-26 11:10:49,418", "level": "INFO", "message": "Processing request for USER_05", "module": "main", "line": 28, "trace_id": "d6edb277"}
+{"timestamp": "2025-12-26 11:10:49,418", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_05', 'status': 200, 'payload': {'val': 16}}", "module": "main", "line": 12, "trace_id": "d6edb277"}
+{"timestamp": "2025-12-26 11:10:49,418", "level": "WARNING", "message": "Connection unstable for USER_05. Using cached headers.", "module": "main", "line": 16, "trace_id": "d6edb277"}
+{"timestamp": "2025-12-26 11:10:49,418", "level": "INFO", "message": "Calculation complete for USER_05: Result=32", "module": "main", "line": 36, "trace_id": "d6edb277"}
+{"timestamp": "2025-12-26 11:10:49,520", "level": "INFO", "message": "Processing request for USER_06", "module": "main", "line": 28, "trace_id": "140513a5"}
+{"timestamp": "2025-12-26 11:10:49,520", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_06', 'status': 200, 'payload': {'val': 32}}", "module": "main", "line": 12, "trace_id": "140513a5"}
+{"timestamp": "2025-12-26 11:10:49,521", "level": "INFO", "message": "Calculation complete for USER_06: Result=64", "module": "main", "line": 36, "trace_id": "140513a5"}
+{"timestamp": "2025-12-26 11:10:49,623", "level": "INFO", "message": "Processing request for USER_07", "module": "main", "line": 28, "trace_id": "ab17870e"}
+{"timestamp": "2025-12-26 11:10:49,641", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_07', 'status': 200, 'payload': {'val': 14}}", "module": "main", "line": 12, "trace_id": "ab17870e"}
+{"timestamp": "2025-12-26 11:10:49,646", "level": "ERROR", "message": "Failed to find 'payload' in API response for USER_07", "module": "main", "line": 40, "trace_id": "ab17870e", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\Desktop\\log_upskill\\main.py\", line 34, in process_request\n    result = data[\"payload\"][\"val\"] * 2\n            ~~~~^^^^^^^^^^^\nKeyError: 'payload'"}
+{"timestamp": "2025-12-26 11:10:49,753", "level": "INFO", "message": "Processing request for USER_08", "module": "main", "line": 28, "trace_id": "d0d48fad"}
+{"timestamp": "2025-12-26 11:10:49,753", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_08', 'status': 200, 'payload': {'val': 39}}", "module": "main", "line": 12, "trace_id": "d0d48fad"}
+{"timestamp": "2025-12-26 11:10:49,753", "level": "INFO", "message": "Calculation complete for USER_08: Result=78", "module": "main", "line": 36, "trace_id": "d0d48fad"}
+{"timestamp": "2025-12-26 11:10:49,854", "level": "INFO", "message": "Processing request for USER_09", "module": "main", "line": 28, "trace_id": "5c45b0e7"}
+{"timestamp": "2025-12-26 11:10:49,854", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_09', 'status': 200, 'payload': {'val': 91}}", "module": "main", "line": 12, "trace_id": "5c45b0e7"}
+{"timestamp": "2025-12-26 11:10:49,855", "level": "INFO", "message": "Calculation complete for USER_09: Result=182", "module": "main", "line": 36, "trace_id": "5c45b0e7"}
+{"timestamp": "2025-12-26 11:10:49,956", "level": "INFO", "message": "Processing request for USER_10", "module": "main", "line": 28, "trace_id": "ba22563c"}
+{"timestamp": "2025-12-26 11:10:49,956", "level": "DEBUG", "message": "RAW API RESPONSE: {'id': 'USER_10', 'status': 200, 'payload': {'val': 36}}", "module": "main", "line": 12, "trace_id": "ba22563c"}
+{"timestamp": "2025-12-26 11:10:49,956", "level": "INFO", "message": "Calculation complete for USER_10: Result=72", "module": "main", "line": 36, "trace_id": "ba22563c"}
+{"timestamp": "2025-12-26 11:14:41,746", "level": "INFO", "message": "Processing request for USER_11", "module": "main", "line": 28, "trace_id": "9c7408ef"}
+{"timestamp": "2025-12-26 11:14:41,746", "level": "INFO", "message": "Calculation complete for USER_11: Result=192", "module": "main", "line": 36, "trace_id": "9c7408ef"}
+{"timestamp": "2025-12-26 11:14:41,848", "level": "INFO", "message": "Processing request for USER_12", "module": "main", "line": 28, "trace_id": "6b72ce10"}
+{"timestamp": "2025-12-26 11:14:41,848", "level": "INFO", "message": "Calculation complete for USER_12: Result=118", "module": "main", "line": 36, "trace_id": "6b72ce10"}
+{"timestamp": "2025-12-26 11:14:41,949", "level": "INFO", "message": "Processing request for USER_13", "module": "main", "line": 28, "trace_id": "e01cd291"}
+{"timestamp": "2025-12-26 11:14:41,949", "level": "INFO", "message": "Calculation complete for USER_13: Result=132", "module": "main", "line": 36, "trace_id": "e01cd291"}
+{"timestamp": "2025-12-26 11:14:42,051", "level": "INFO", "message": "Processing request for USER_14", "module": "main", "line": 28, "trace_id": "5d573810"}
+{"timestamp": "2025-12-26 11:14:42,051", "level": "INFO", "message": "Calculation complete for USER_14: Result=162", "module": "main", "line": 36, "trace_id": "5d573810"}
+{"timestamp": "2025-12-26 11:14:42,152", "level": "INFO", "message": "Processing request for USER_15", "module": "main", "line": 28, "trace_id": "7907e86c"}
+{"timestamp": "2025-12-26 11:14:42,152", "level": "WARNING", "message": "Connection unstable for USER_15. Using cached headers.", "module": "main", "line": 16, "trace_id": "7907e86c"}
+{"timestamp": "2025-12-26 11:14:42,153", "level": "INFO", "message": "Calculation complete for USER_15: Result=138", "module": "main", "line": 36, "trace_id": "7907e86c"}
+{"timestamp": "2025-12-26 11:14:42,255", "level": "INFO", "message": "Processing request for USER_16", "module": "main", "line": 28, "trace_id": "6ae96850"}
+{"timestamp": "2025-12-26 11:14:42,255", "level": "INFO", "message": "Calculation complete for USER_16: Result=188", "module": "main", "line": 36, "trace_id": "6ae96850"}
+{"timestamp": "2025-12-26 11:14:42,357", "level": "INFO", "message": "Processing request for USER_17", "module": "main", "line": 28, "trace_id": "67359495"}
+{"timestamp": "2025-12-26 11:14:42,357", "level": "ERROR", "message": "Failed to find 'payload' in API response for USER_17", "module": "main", "line": 40, "trace_id": "67359495", "exception": "Traceback (most recent call last):\n  File \"C:\\Users\\LENOVO\\Desktop\\log_upskill\\main.py\", line 34, in process_request\n    result = data[\"payload\"][\"val\"] * 2\n            ~~~~^^^^^^^^^^^\nKeyError: 'payload'"}
+{"timestamp": "2025-12-26 11:14:42,462", "level": "INFO", "message": "Processing request for USER_18", "module": "main", "line": 28, "trace_id": "adbeda7f"}
+{"timestamp": "2025-12-26 11:14:42,462", "level": "INFO", "message": "Calculation complete for USER_18: Result=32", "module": "main", "line": 36, "trace_id": "adbeda7f"}
+{"timestamp": "2025-12-26 11:14:42,562", "level": "INFO", "message": "Processing request for USER_19", "module": "main", "line": 28, "trace_id": "f22f14a3"}
+{"timestamp": "2025-12-26 11:14:42,562", "level": "INFO", "message": "Calculation complete for USER_19: Result=188", "module": "main", "line": 36, "trace_id": "f22f14a3"}
+{"timestamp": "2025-12-26 11:14:42,663", "level": "INFO", "message": "Processing request for USER_20", "module": "main", "line": 28, "trace_id": "64703e4c"}
+{"timestamp": "2025-12-26 11:14:42,664", "level": "INFO", "message": "Calculation complete for USER_20: Result=150", "module": "main", "line": 36, "trace_id": "64703e4c"}
